@@ -105,14 +105,12 @@ class LCG(PRNG):
         for i in range(self.length):
             x.append((self.a * x[-1] + self.c) % self.m)
        
-        # self.generated_number
+       
         self.generated_number = ''.join(map(str,x))
 
 
 
 class MT(PRNG):
-    """
-        Algoritmo Mersenne Twister.
-    """
+    
     def __init__(self, seed):
         super(MT, self).__init__(seed)
